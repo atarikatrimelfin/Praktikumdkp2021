@@ -2,6 +2,15 @@
 #Aplikasi list peminjam buku
 buku = []
 
+def isi_identitas():
+    print ("\n")
+    print ("Hallo, Pustakawan. Selamat Datang di Program Perpustakaan Kelompok 15")
+    print ("------------ Silahkan isi identitas Anda terlebih dahulu ------------")
+    data = input ("Nama         :")
+    data = input ("Pekerjaan    :")
+    data = input ("No. HP       :")
+isi_identitas()
+
 def list_buku():
     if len(buku) <= 0:
         print ("Anda Belum Meminjam Buku Apapun")
