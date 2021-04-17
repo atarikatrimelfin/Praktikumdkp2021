@@ -1,3 +1,4 @@
+
 #Aplikasi list peminjam buku
 buku = []
 
@@ -20,6 +21,10 @@ def menghapus_buku():
         print ("\nPilihan salah!")
     else:
         buku.remove(buku[indeks])
+def saran():
+    saran_peminjam = input('Apa saran anda untuk kami? ')
+    print('Terima Kasih')
+
 
 def tentang_kami():
     print("   Kami adalah kelompok 15. Ini merupakan program perpustakaan \ndimana kita dapat melihat daftar list pinjaman buku, menambahkan buku,\n                      dan juga menghapus buku")
@@ -31,7 +36,8 @@ def pilihan_menu():
     print ("[2] Meminjam buku baru")
     print ("[3] Menghapus buku")
     print ("[4] Tentang Kami")
-    print ("[5] Keluar")
+    print ("[5] Saran untuk kami")
+    print ("[6] Exit")
     
     menu = input("\nPilih menu> ")
     print ("\n")
@@ -45,6 +51,8 @@ def pilihan_menu():
     elif int(menu) == 4:
         tentang_kami()
     elif int(menu) == 5:
+        saran()
+    elif int(menu) == 6:
         exit()
     else:
         print ("Salah pilih!")
