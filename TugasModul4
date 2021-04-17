@@ -1,3 +1,55 @@
-//Ini adalah tugas untuk modul 4
-//Kelompok 15
-//*Nama anggota*
+#Aplikasi list peminjam buku
+buku = []
+
+def list_buku():
+    if len(buku) <= 0:
+        print ("Anda Belum Meminjam Buku Apapun")
+    else:
+        for indeks in range(len(buku)):
+            print ("[{}] {}".format (indeks, buku[indeks]))
+
+def masukkan_buku():
+    buku_baru = input("Judul Buku: ")
+    buku.append(buku_baru)
+
+
+def menghapus_buku():
+    list_buku()
+    indeks = int(input("Masukkan nomor buku yang ingin dihapus: "))
+    if indeks >= len(buku):
+        print ("\nPilihan salah!")
+    else:
+        buku.remove(buku[indeks])
+
+def tentang_kami():
+    print("   Kami adalah kelompok 15. Ini merupakan program perpustakaan \ndimana kita dapat melihat daftar list pinjaman buku, menambahkan buku,\n                      dan juga menghapus buku")
+
+def pilihan_menu():
+    print ("\n")
+    print ("----------- Program Data Buku Yang Dipinjam ----------")
+    print ("[1] List buku yang dipinjam")
+    print ("[2] Meminjam buku baru")
+    print ("[3] Menghapus buku")
+    print ("[4] Tentang Kami")
+    print ("[5] Keluar")
+    
+    menu = input("\nPilih menu> ")
+    print ("\n")
+
+    if int(menu) == 1:
+        list_buku()
+    elif int(menu) == 2:
+        masukkan_buku()
+    elif int(menu) == 3:
+        menghapus_buku()
+    elif int(menu) == 4:
+        tentang_kami()
+    elif int(menu) == 5:
+        exit()
+    else:
+        print ("Salah pilih!")
+
+if __name__ == "__main__":
+
+    while(True):
+        pilihan_menu()
